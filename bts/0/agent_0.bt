@@ -27,7 +27,7 @@
                 {
                   "key": "message",
                   "type": "string",
-                  "value": "Enter messag:"
+                  "value": "Enter message:"
                 }
               ],
               "outputParams": [
