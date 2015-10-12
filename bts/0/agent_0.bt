@@ -3,8 +3,9 @@
     "version": "1.2.0"
   },
   {
+    "activated": true,
     "metadata": {
-      "label": "06487d8b-789a-46a1-a2cc-002dca948d89"
+      "label": ""
     },
     "properties": {},
     "children": [
@@ -13,20 +14,57 @@
         "metadata": {
           "label": ""
         },
-        "properties": {
-          "name": "Say",
-          "inputParams": [
-            {
-              "key": "message",
-              "type": "string",
-              "value": "Hello World!"
-            }
-          ],
-          "outputParams": []
-        },
-        "children": [],
-        "id": "5654eae8-523d-41bf-9787-1e299a1461e3",
-        "type": "action"
+        "properties": {},
+        "children": [
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "Prompt",
+              "inputParams": [
+                {
+                  "key": "message",
+                  "type": "string",
+                  "value": "Enter messag:"
+                }
+              ],
+              "outputParams": [
+                {
+                  "key": "answer",
+                  "type": "entityKnowledge",
+                  "value": "answer"
+                }
+              ]
+            },
+            "children": [],
+            "id": "75e61e19-cf50-414c-b0dd-338de7452d53",
+            "type": "action"
+          },
+          {
+            "activated": true,
+            "metadata": {
+              "label": ""
+            },
+            "properties": {
+              "name": "Say",
+              "inputParams": [
+                {
+                  "key": "message",
+                  "type": "entityKnowledge",
+                  "value": "answer"
+                }
+              ],
+              "outputParams": []
+            },
+            "children": [],
+            "id": "ce0d788c-1d55-4113-8c54-f59917bb8104",
+            "type": "action"
+          }
+        ],
+        "id": "b515cc6b-c715-47ad-b23a-19f17b7b7b91",
+        "type": "sequence"
       },
       {
         "activated": true,
@@ -36,15 +74,15 @@
         "properties": {
           "behavior": {
             "type": "uriPath",
-            "value": "bts/tuto_city_manager.bt"
+            "value": "bts/tuto_reddit_manager.bt"
           },
           "inputParams": []
         },
         "children": [],
-        "id": "71ca12f5-42dc-401d-98bc-e9175ba4fecd",
+        "id": "1e5df540-a46a-4a9e-840b-3e633ce63170",
         "type": "embedded"
       }
     ],
-    "id": "89522791-cdec-4a0b-9496-7054a610ff4f"
+    "id": "5a165039-fa55-4e74-bf7d-4ac29044ee84"
   }
 ]
